@@ -1,0 +1,38 @@
+body {
+    background-image: url('https://http2.mlstatic.com/morango-congelado-10-kg-D_NQ_NP_22937-MLB20238340636_022015-F.jpg');
+    background-size: auto 100vh;
+    font-family: Verdana; 
+    height: 100vh;
+  }
+  
+  .menu {
+    background-color: #2E2E2E; 
+  }
+  
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li{
+    list-style: none; 
+  }
+  
+  a{
+    color: white; 
+    text-decoration: none; 
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle,
+  .site-title{
+    color: white; 
+    text-align:center;
+  }
+  
+  .site-subtitle{
+    font-style: italic; 
+  }

@@ -1,12 +1,12 @@
 body {
     background-image: url('https://http2.mlstatic.com/morango-congelado-10-kg-D_NQ_NP_22937-MLB20238340636_022015-F.jpg');
-    background-size: auto 100vh;
+    background-size: auto 150vh;
     font-family: Verdana; 
-    height: 100vh;
+    height: 90vh;
   }
   
   .menu {
-    background-color: #2E2E2E; 
+    background-color: rgb(46, 32, 32); 
   }
   
   .menu ul{

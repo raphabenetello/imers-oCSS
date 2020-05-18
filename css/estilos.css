@@ -1,12 +1,45 @@
+/* reset do CSS */ 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url('https://http2.mlstatic.com/morango-congelado-10-kg-D_NQ_NP_22937-MLB20238340636_022015-F.jpg');
-    background-size: auto 150vh;
-    font-family: Verdana; 
-    height: 90vh;
+    background-image: url('../img/367502-PAXLKG-681.jpg');
+    background-size: auto 160vh;
+    font-family: 'Source Code Pro', monospace;
+    height: 160vh;
+    font-size: 12px;
   }
-  
+
+/* Se a tela tiver pelo 400px, vai carregar esses estilos */  
+/*breakpoint*/
+
+@media (min-width: 400px) {
+   body{
+     font-size: 14px;
+   }
+}  
+
+@media (min-width: 600px) {
+  body{
+    font-size: 16px;
+  }
+}  
+
+header{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   .menu {
     background-color: rgb(46, 32, 32); 
+    position: fixed;
+    width: 100vw;
+    top: 10px;
   }
   
   .menu ul{
@@ -17,7 +50,12 @@ body {
   .menu li{
     list-style: none; 
   }
-  
+
+  .menu a{
+    display:block;
+    padding: 10px 20px;
+  }
+
   a{
     color: white; 
     text-decoration: none; 
@@ -33,6 +71,62 @@ body {
     text-align:center;
   }
   
-  .site-subtitle{
-    font-style: italic; 
+  .site-title{
+    color: white; 
+    text-align:center;
+    font-size: 2em;
+    font-family: 'Gloria Hallelujah', cursive;
   }
+
+  .site-subtitle{
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .portfolio {
+    padding: 2em;
+    height: 80vh;
+  }
+
+  .portfolio h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: azure;
+    margin-bottom: 0.3em;
+    text-align: center;
+  }
+
+
+  /* grid não altera instataneamente como o flex, ele permite escolher quantas colunas se quer */
+
+  .portfolio .grid{
+    display: grid;
+    gap: 1.5em;
+  }
+
+  @media (min-width: 560px){
+    .portfolio .grid{
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 820px){
+    .portfolio .grid{
+      grid-template-columns: repeat(3, 240px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+
+  .portfolio figure{
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
+    object-position: initial;
+    border-radius: 0%;
+  }
+

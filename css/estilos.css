@@ -95,7 +95,6 @@ header{
     text-align: center;
   }
 
-
   /* grid não altera instataneamente como o flex, ele permite escolher quantas colunas se quer */
 
   .portfolio .grid{

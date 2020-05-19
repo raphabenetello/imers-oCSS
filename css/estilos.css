@@ -83,16 +83,18 @@ header{
     font-family: 'Montserrat', sans-serif;
   }
 
+  .contato,
   .portfolio {
-    padding: 2em;
+    padding: 1em;
     height: 80vh;
   }
 
+  .contato,
   .portfolio h2 {
     font-family: 'Montserrat', sans-serif;
-    color: azure;
+    color: white;
     margin-bottom: 0.3em;
-    text-align: center;
+    text-align: left;
   }
 
   /* grid não altera instataneamente como o flex, ele permite escolher quantas colunas se quer */
@@ -102,18 +104,27 @@ header{
     gap: 1.5em;
   }
 
-  @media (min-width: 560px){
+  @media (min-width: 500px){
     .portfolio .grid{
-      grid-template-columns: 240px 240px;
+      grid-template-columns: 200px 200px;
     }
   }
 
-  @media (min-width: 820px){
+  @media (min-width: 700px){
     .portfolio .grid{
       grid-template-columns: repeat(3, 240px);
       align-content: center;
       justify-content: center;
       height: calc(100vh - 8em - 48px);
+    }
+  }
+
+  @media (min-width: 900px){
+   .portfolio .grid{
+      grid-template-columns: repeat(4, 200px);
+      height: calc(100vh - 8em - 48px);
+      align-content: center;
+      justify-content: center;
     }
   }
 
@@ -126,6 +137,29 @@ header{
     width: 200px;
     object-fit: cover;
     object-position: initial;
-    border-radius: 0%;
+    border-radius: 5%;
   }
 
+  .contato{
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .icons a{
+    color: white;
+    font-size: 5em;
+  }
+
+  
+  .fab{
+    font-family: "Font Awesome 5 Brands";
+  }
+
+  .far{
+    font-family: "Font Awesome 5 Free";
+  }
+
+  .fab,
+  .far{
+    font-size: 900px;
+  }

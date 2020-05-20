@@ -6,8 +6,8 @@
 }
 
 body {
-    background-image: url('../img/367502-PAXLKG-681.jpg');
-    background-size: auto 160vh;
+    background-image:url("../img/367502-PAXLKG-681.jpg");
+    background-size: auto 300vh;
     font-family: 'Source Code Pro', monospace;
     height: 160vh;
     font-size: 12px;
@@ -29,7 +29,7 @@ body {
 }  
 
 header{
-  height: 70vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +40,7 @@ header{
     position: fixed;
     width: 100vw;
     top: 10px;
+    z-index: 1;
   }
   
   .menu ul{
@@ -54,6 +55,13 @@ header{
   .menu a{
     display:block;
     padding: 10px 20px;
+    transition: background-color 1s, color 50ms;
+  }
+
+  .menu a:active,
+  .menu a:hover{
+    background-color: white;
+    color: rgb(43, 37, 37)
   }
 
   a{
@@ -65,6 +73,25 @@ header{
     text-decoration: underline;
   }
   
+  .titulo{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 1s linear 2s animaTitulo forwards;
+  }
+
+  @keyframes animaTitulo{
+    0%{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+      /* o estado inicial já está declarado no .titulo, logo não precisa ser considerado aqui, neste caso. */
+    }
+    100%{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    }
+    /* Ao invés de 0 e 100% a propriedade também aceita From e To */
+  }
+
   .site-subtitle,
   .site-title{
     color: white; 
@@ -86,14 +113,15 @@ header{
   .contato,
   .portfolio {
     padding: 1em;
-    height: 80vh;
+    min-height: 80vh;
   }
 
   .contato,
   .portfolio h2 {
     font-family: 'Montserrat', sans-serif;
     color: white;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
+    margin-top: 2em;
     text-align: left;
   }
 
@@ -137,29 +165,26 @@ header{
     width: 200px;
     object-fit: cover;
     object-position: initial;
-    border-radius: 5%;
+    border-radius: 3%;
+    transition: transform 500ms;
   }
 
-  .contato{
-    font-size: 1em;
-    margin-bottom: 0.5em;
+  .img-portfolio:hover{
+    transform: scale(1.1);
   }
 
-  .icons a{
+  .contato .grid{
+    text-align: center;
+  }
+
+  .contato a{
     color: white;
     font-size: 5em;
+    transition: text-shadow 50ms;
   }
 
-  
-  .fab{
-    font-family: "Font Awesome 5 Brands";
-  }
-
-  .far{
-    font-family: "Font Awesome 5 Free";
-  }
-
-  .fab,
-  .far{
-    font-size: 900px;
+  .contato a:active,
+  .contato a:hover{
+    text-decoration: none;
+    text-shadow:0px 0px 10px white;
   }

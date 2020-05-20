@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image:url("../img/367502-PAXLKG-681.jpg");
+    background-image: url("../img/backtosco.jpg");
     background-size: auto 300vh;
     font-family: 'Source Code Pro', monospace;
     height: 160vh;
@@ -52,31 +52,39 @@ header{
     list-style: none; 
   }
 
+  .mainmenu,
   .menu a{
     display:block;
     padding: 10px 20px;
     transition: background-color 1s, color 50ms;
   }
 
+  .mainmenu,
   .menu a:active,
   .menu a:hover{
     background-color: white;
     color: rgb(43, 37, 37)
   }
 
+  .mainmenu,
   a{
     color: white; 
     text-decoration: none; 
   }
   
+  .mainmenu,
   a:hover {
     text-decoration: underline;
+  }
+
+  .mainmenu{
+    font-size: 1.1em;
   }
   
   .titulo{
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
-    animation: 1s linear 2s animaTitulo forwards;
+    animation: .5s linear .5s animaTitulo forwards;
   }
 
   @keyframes animaTitulo{
@@ -110,13 +118,16 @@ header{
     font-family: 'Montserrat', sans-serif;
   }
 
+  .sobre,
   .contato,
   .portfolio {
     padding: 1em;
     min-height: 80vh;
+    margin-bottom: 8em;
   }
 
-  .contato,
+  .sobre h2,
+  .contato h2,
   .portfolio h2 {
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -125,10 +136,46 @@ header{
     text-align: left;
   }
 
+  @media (min-width:1200px){
+  .container{
+    max-width: 1200px;     
+    margin-left: auto;    /* margin letf e right na opção auto centralizam toda box*/
+    margin-right: auto;
+  }
+  }
+
+
+  .sobre p{
+    color: white;
+    text-indent: 1.5em;
+    margin-bottom: 1.2em;
+  }
+
+  .sobre a{
+    text-decoration: underline;
+  }
+
+  .sobre a:hover{
+    background-color: thistle;
+    color: whitesmoke;
+  }
+
+  .sobre .avatar{
+    float: right;
+    margin-left: 1em;
+  }
+
+  .sobre .avatar img{
+    height: 250px;
+    width: 238px;
+    clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0% 100%);
+  }
+
   /* grid não altera instataneamente como o flex, ele permite escolher quantas colunas se quer */
 
   .portfolio .grid{
     display: grid;
+    color: white;
     gap: 1.5em;
   }
 
@@ -161,8 +208,8 @@ header{
   }
 
   .img-portfolio {
-    height: 150px;
-    width: 200px;
+    height: 180px;
+    width: 100%;
     object-fit: cover;
     object-position: initial;
     border-radius: 3%;
@@ -171,6 +218,34 @@ header{
 
   .img-portfolio:hover{
     transform: scale(1.1);
+  }
+
+  .flip-card{
+    perspective: 500px;
+  }
+
+  .card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+
+  .flip-card:hover .card{
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+  }
+
+  .card-back{
+    background-color: rgb(48, 43, 43);
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
   }
 
   .contato .grid{
